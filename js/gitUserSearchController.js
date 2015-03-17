@@ -15,4 +15,8 @@ githubUserSearch.controller('GitUserSearchController', function($scope) {
     ]
   };
 
+  $scope.doSearch = function() {
+    alert("Hello World");
+  };
+
 });
