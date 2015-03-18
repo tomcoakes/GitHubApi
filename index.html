@@ -16,6 +16,7 @@
     <div>
       <form class="form-horizontal">
         <input type="text" ng-model="searchTerm">
+        <input type="number" ng-model="pageNumber">
         <button class="btn" ng-click="doSearch()">Search</button>
       </form>
       <ul class="list-group" ng-repeat="user in searchResult.items">
@@ -24,6 +25,7 @@
           <a ng-href="{{user.html_url}}">{{user.login}}</a>
         </li>
       </ul>
+
     </div>
   </body>
 </html>
