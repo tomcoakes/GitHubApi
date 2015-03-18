@@ -3,6 +3,8 @@ githubUserSearch.controller('GitUserSearchController', function($scope) {
   
 
   $scope.doSearch = function() {
+    $scope.searchTerm;
+
     $scope.searchResult = {
       "items": [
         {
@@ -17,6 +19,11 @@ githubUserSearch.controller('GitUserSearchController', function($scope) {
         }
       ]
     };
+  
+    
+
   };
+
+
 
 });
