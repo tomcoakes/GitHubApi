@@ -3,11 +3,13 @@ githubUserSearch.controller('GitUserSearchController', function($scope, $resourc
   $scope.doSearch = function() {
     $scope.searchTerm;
 
-    var queryURL = 'https://api.github.com/users/' + $scope.searchTerm + '?client_id=' + auth['clientID']
+    var queryURL = 'https://api.github.com/search/users'
     var searchResource = $resource(queryURL)
-    console.log(queryURL)
 
-    $scope.searchResult = searchResource.get();
+    $scope.searchResult = searchResource.get({
+      q: $scope.searchTerm,
+      access_token: auth["clientToken"]
+    });
 
   };
 });
